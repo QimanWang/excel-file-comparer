@@ -1,0 +1,6 @@
+UPDATE <Database Name>
+SET 'Guest name(s)' = SUBSTRING('Booked by', CHARINDEX(',', 'Booked by') + 1, LEN('Booked by') - CHARINDEX(',', 'Booked by') + 1)
++ ' ' + SUBSTRING('Booked by', 1, CHARINDEX(',', 'Booked by') - 1
+WHERE 'Guest name(s)' = '';
+
+
