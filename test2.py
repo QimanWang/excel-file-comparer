@@ -1,6 +1,48 @@
 import pandas as pd
 import xlsxwriter
+import os
 from datetime import datetime
+
+
+# developed with python 3.5 for pyinstaller function
+#############################################################
+# check conditions and print out
+def same_name(booking_name, hotel_name):
+    if hotel_name[:5] == 'name\n':
+        hotel_name = hotel_name[5:]
+
+    hotel_name = hotel_name.split(",")
+    hotel_name = hotel_name[1][1:] + " " + hotel_name[0]
+
+    if hotel_name == booking_name:
+        # print("h:", hotel_name, "b:", booking_name)
+        return True
+    else:
+        return False
+
+
+def calc_hotel_price(hotel_price, arrival, departure):
+    # print("input: ", booking_price, hotel_price, arrival, departure)
+
+    if departure[:2] == "De":
+        departure = departure[9:]
+        arrival = arrival[7:]
+        hotel_price = hotel_price[4:]
+
+    date_format = "%m/%d/%Y"
+    a = datetime.strptime(departure, date_format)
+    b = datetime.strptime(arrival, date_format)
+    delta = a - b
+    # print("hotel price: ", float(delta.days) * float(hotel_price), "booking price: ", float(booking_price))
+    # print(float(delta.days) * float(hotel_price) == float(booking_price))
+    return (float(delta.days) * float(hotel_price))
+
+
+######################################################################################
+match = 0
+diff_price = 0
+canceled = 0
+not_found = 0
 
 # load and prepare the booking df
 xl = pd.ExcelFile("Booking.com 7.1-8.13.xls")
@@ -57,56 +99,39 @@ c_df = c_df.loc[(c_df['Rate'] != "")]
 # for index, row in c_df.iterrows():
 #     print("index:::", index, row['Name'], row['Arrival'], row['Departure'], row['Rate'])
 
+ok_file = ""
+cancel_file = ""
+booking_file = ""
+files = [f for f in os.listdir('.') if os.path.isfile(f)]
+for f in files:
+    if " ok " in f and f[:2] != "~$":
+        ok_file = f
+    if " cancel " in f and f[:2] != "~$":
+        cancel_file = f
+    if " booking " in f and f[:2] != "~$":
+        booking_file = f
 
 #########################################
 print("begin comparison")
-workbook = xlsxwriter.Workbook('Expenses01.xlsx')
+# create worksheet
+workbook = xlsxwriter.Workbook('Incorrect prices.xlsx')
 worksheet = workbook.add_worksheet()
 rowm = 0
 coln = 0
 worksheet.write(rowm, coln, "Name")
 worksheet.write(rowm, coln + 1, "Booking.com Price")
-worksheet.write(rowm, coln + 2, "Discritpion")
-rowm+=1
+worksheet.write(rowm, coln + 2, "Hotel Price")
+worksheet.write(rowm, coln + 3, "Price difference")
+worksheet.write(rowm, coln + 4, "Discritpion")
+rowm += 1
+
+workbook_nf = xlsxwriter.Workbook('Customers Not found.xlsx')
+worksheet_nf = workbook_nf.add_worksheet()
 # # print b_df
 # print(list(b_df))
 # for index, row in b_df.iterrows():
 #     print("index:::", index, row['Guest name(s)'].lower(),row['Check-in'],row['Check-out'],row['Price'])
 #
-
-#############################################################
-# check conditions and print out
-def same_name(booking_name, hotel_name):
-    if hotel_name[:5] == 'name\n':
-        hotel_name = hotel_name[5:]
-
-    hotel_name = hotel_name.split(",")
-    hotel_name = hotel_name[1][1:] + " " + hotel_name[0]
-
-    if hotel_name == booking_name:
-        # print("h:", hotel_name, "b:", booking_name)
-        return True
-    else:
-        return False
-
-
-def same_price(booking_price, hotel_price, arrival, departure):
-    # print("input: ", booking_price, hotel_price, arrival, departure)
-
-    if departure[:2] == "De":
-        departure = departure[9:]
-        arrival = arrival[7:]
-        hotel_price = hotel_price[4:]
-
-    date_format = "%m/%d/%Y"
-    a = datetime.strptime(departure, date_format)
-    b = datetime.strptime(arrival, date_format)
-    delta = a - b
-    # print("hotel price: ", float(delta.days) * float(hotel_price), "booking price: ", float(booking_price))
-    # print(float(delta.days) * float(hotel_price) == float(booking_price))
-    if (float(delta.days) * float(hotel_price) == float(booking_price)):
-        return True
-
 
 # check loop
 for index, row in b_df.iterrows():
@@ -144,14 +169,22 @@ for index, row in b_df.iterrows():
 
             if (h_arrival == b_checkin) & (h_departure == b_checkout):
                 found = True
-                print()
-                if not same_price(price, row_ok['Rate'][1:], row_ok['Arrival'], row_ok['Departure']):
+                hotel_price = calc_hotel_price(row_ok['Rate'][1:], row_ok['Arrival'], row_ok['Departure'])
+                price_difference = hotel_price - float(price)
+                if price_difference != 0.0:
                     print(name, price, "found in Ok file ,but different price")
                     worksheet.write(rowm, coln, name)
                     worksheet.write(rowm, coln + 1, price)
-                    worksheet.write(rowm, coln + 2, "Found in OK file, but price is different.")
+                    worksheet.write(rowm, coln + 2, hotel_price)
+                    worksheet.write(rowm, coln + 3, price_difference)
+                    worksheet.write(rowm, coln + 4, "Found in OK file, but price is different.")
                     rowm += 1
-                    break
+                    diff_price += 1
+                else:
+                    match += 1
+                    print(name, ' Everything match')
+
+            break
 
     if (found == False):
         # check if in canceled
@@ -159,11 +192,23 @@ for index, row in b_df.iterrows():
             if (same_name(name.lower(), row_c['Name'].lower())):
                 print(name + "**BAD***********************************************")
                 worksheet.write(rowm, coln, name)
-                worksheet.write(rowm, coln + 2, "Found in Cancel file.")
+                worksheet.write(rowm, coln + 4, "Found in Cancel file.")
                 rowm += 1
                 found = True
+                canceled += 1
                 break
     if found == False:
         print(name, " Can't find customer Name")
+        not_found += 1
+        worksheet.write(rowm, coln, name)
+        worksheet.write(rowm, coln + 1, price)
+        worksheet.write(rowm, coln + 4, "can't find customer")
+        rowm += 1
 
 workbook.close()
+workbook_nf.close()
+
+print("match: ", match)
+print("diff_price: ", diff_price)
+print("canceled: ", canceled)
+print("not found: ", not_found)
