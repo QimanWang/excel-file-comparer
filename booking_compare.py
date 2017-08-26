@@ -13,8 +13,13 @@ for f in files:
         ok_file = f
     if " cancel " in f and f[:2] != "~$":
         cancel_file = f
-    if " booking " in f and f[:2] != "~$":
+    if "Booking.com" in f and f[:2] != "~$":
+
         booking_file = f
+
+msg = "Files detected:\n" + booking_file + "\n" + ok_file + "\n" + cancel_file + "\n" + "Press Enter key to begin the process."
+a = input(msg)
+
 
 # load and prepare the booking df
 xl = pd.ExcelFile(booking_file)
@@ -30,7 +35,6 @@ for index, row in b_df.iterrows():
 # loading the ok DF
 xl = pd.ExcelFile(ok_file)
 ok_df = xl.parse("Sheet1", header=2, keep_default_na=False, )
-print(list(ok_df))
 o_df = ok_df.loc[(ok_df['Name'] != "") & (ok_df['Name'] != "Name") &
                  (ok_df['Name'] != "Guest List Detail") &
                  (ok_df['Name'] != "30031 - DAYS INN PHILADELPHIA.") &
@@ -53,7 +57,6 @@ o_df = o_df.loc[(o_df['Rate'] != "")]
 # loading the cancel DF
 xl = pd.ExcelFile(cancel_file)
 c_df = xl.parse("Sheet1", header=2, keep_default_na=False, )
-print(list(c_df))
 c_df = c_df.loc[(c_df['Name'] != "") & (c_df['Name'] != "Name") &
                 (c_df['Name'] != "Guest List Detail") &
                 (c_df['Name'] != "30031 - DAYS INN PHILADELPHIA.") &

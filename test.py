@@ -1,9 +1,28 @@
 import pandas as pd
 import xlsxwriter
+import os
 from datetime import datetime
 
+# find the files neede to process
+ok_file = ""
+cancel_file = ""
+booking_file = ""
+files = [f for f in os.listdir('.') if os.path.isfile(f)]
+for f in files:
+    if " ok " in f and f[:2] != "~$":
+        ok_file = f
+    if " cancel " in f and f[:2] != "~$":
+        cancel_file = f
+    if "Booking.com" in f and f[:2] != "~$":
+
+        booking_file = f
+
+msg = "Files detected:\n" + booking_file + "\n" + ok_file + "\n" + cancel_file + "\n" + "Press Enter key to begin the process."
+a = input(msg)
+
+
 # load and prepare the booking df
-xl = pd.ExcelFile("Booking.com 7.1-8.13.xls")
+xl = pd.ExcelFile(booking_file)
 booking_df = xl.parse("Sheet1", header=0, keep_default_na=False)
 b_df = booking_df[booking_df['Status'] == 'ok']
 for index, row in b_df.iterrows():
@@ -14,9 +33,8 @@ for index, row in b_df.iterrows():
 
 ##########################################
 # loading the ok DF
-xl = pd.ExcelFile("30031-GuestListDetailed ok 7.1-8.13.xlsx")
+xl = pd.ExcelFile(ok_file)
 ok_df = xl.parse("Sheet1", header=2, keep_default_na=False, )
-print(list(ok_df))
 o_df = ok_df.loc[(ok_df['Name'] != "") & (ok_df['Name'] != "Name") &
                  (ok_df['Name'] != "Guest List Detail") &
                  (ok_df['Name'] != "30031 - DAYS INN PHILADELPHIA.") &
@@ -37,9 +55,8 @@ o_df = o_df.loc[(o_df['Rate'] != "")]
 
 ##########################
 # loading the cancel DF
-xl = pd.ExcelFile("30031-GuestListDetailed cancel 7.1-8.13.xlsx")
+xl = pd.ExcelFile(cancel_file)
 c_df = xl.parse("Sheet1", header=2, keep_default_na=False, )
-print(list(c_df))
 c_df = c_df.loc[(c_df['Name'] != "") & (c_df['Name'] != "Name") &
                 (c_df['Name'] != "Guest List Detail") &
                 (c_df['Name'] != "30031 - DAYS INN PHILADELPHIA.") &
@@ -64,6 +81,10 @@ workbook = xlsxwriter.Workbook('Expenses01.xlsx')
 worksheet = workbook.add_worksheet()
 rowm = 0
 coln = 0
+worksheet.write(rowm, coln, "Name")
+worksheet.write(rowm, coln + 1, "Booking.com Price")
+worksheet.write(rowm, coln + 2, "Discritpion")
+rowm += 1
 
 
 # # print b_df
@@ -142,9 +163,13 @@ for index, row in b_df.iterrows():
 
             if (h_arrival == b_checkin) & (h_departure == b_checkout):
                 found = True
-
+                print()
                 if not same_price(price, row_ok['Rate'][1:], row_ok['Arrival'], row_ok['Departure']):
                     print(name, price, "found in Ok file ,but different price")
+                    worksheet.write(rowm, coln, name)
+                    worksheet.write(rowm, coln + 1, price)
+                    worksheet.write(rowm, coln + 2, "Found in OK file, but price is different.")
+                    rowm += 1
                     break
 
     if (found == False):
@@ -152,4 +177,12 @@ for index, row in b_df.iterrows():
         for index_c, row_c in c_df.iterrows():
             if (same_name(name.lower(), row_c['Name'].lower())):
                 print(name + "**BAD***********************************************")
+                worksheet.write(rowm, coln, name)
+                worksheet.write(rowm, coln + 2, "Found in Cancel file.")
+                rowm += 1
+                found = True
                 break
+    if found == False:
+        print(name, " Can't find customer Name")
+
+workbook.close()
