@@ -13,7 +13,7 @@ for f in files:
         ok_file = f
     if " cancel " in f and f[:2] != "~$":
         cancel_file = f
-    if "Booking.com" in f and f[:2] != "~$":
+    if "rstatement" in f and f[:2] != "~$":
 
         booking_file = f
 
@@ -182,6 +182,7 @@ for index, row in b_df.iterrows():
                 rowm += 1
                 found = True
                 break
+
     if found == False:
         print(name, " Can't find customer Name")
 
