@@ -17,7 +17,7 @@ for f in files:
         booking_file = f
 
 msg = "Files detected:\n" + booking_file + "\n" + ok_file + "\n" + cancel_file + "\n" + "Press Enter key to begin the process."
-a = raw_input(msg)
+a = input(msg)
 
 
 # developed with python 3.5 for pyinstaller function

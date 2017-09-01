@@ -63,6 +63,20 @@ not_found = 0
 # load and prepare the booking df
 xl = pd.ExcelFile(booking_file)
 booking_df = xl.parse("Sheet1", header=0, keep_default_na=False)
+
+booking_col_names = list(booking_df)
+print(booking_col_names)
+for name in booking_col_names:
+    a = name.split(" ")
+    if a[-1] == "":
+        b = " ".join(a[:-1])
+    else:
+        b = " ".join(a)
+    booking_df = booking_df.rename(columns={name: b})
+
+booking_col_names = list(booking_df)
+print(booking_col_names)
+
 b_df = booking_df[booking_df['Status'] == 'ok']
 print('booking df created')
 for index, row in b_df.iterrows():
@@ -145,6 +159,7 @@ rowm += 1
 workbook_nf = xlsxwriter.Workbook('Customers Not found.xlsx')
 worksheet_nf = workbook_nf.add_worksheet()
 row_nf = 0
+total_price_difference = 0.00
 # # print b_df
 # print(list(b_df))
 # for index, row in b_df.iterrows():
@@ -190,11 +205,15 @@ for index, row in b_df.iterrows():
                 hotel_price = calc_hotel_price(row_ok['Rate'][1:], row_ok['Arrival'], row_ok['Departure'])
                 price_difference = hotel_price - float(price)
                 if price_difference != 0.0:
+
+                    print(price_difference)
+                    print(total_price_difference)
                     print(name, price, "found in Ok file ,but different price")
                     worksheet.write(rowm, coln, name)
                     worksheet.write(rowm, coln + 1, price)
                     worksheet.write(rowm, coln + 2, hotel_price)
                     worksheet.write(rowm, coln + 3, price_difference)
+                    total_price_difference += price_difference
                     worksheet.write(rowm, coln + 4, "Found in OK file, but price is different.")
                     rowm += 1
                     diff_price += 1
@@ -237,11 +256,12 @@ for index, row in b_df.iterrows():
                     hotel_price = calc_hotel_price(row_ok['Rate'][1:], row_ok['Arrival'], row_ok['Departure'])
                     price_difference = hotel_price - float(price)
 
-                    print(name, price, "found in CANCEL file" )
+                    print(name, price, "found in CANCEL file")
                     worksheet.write(rowm, coln, name)
                     worksheet.write(rowm, coln + 1, price)
                     worksheet.write(rowm, coln + 2, hotel_price)
                     worksheet.write(rowm, coln + 3, price_difference)
+                    total_price_difference += price_difference
                     worksheet.write(rowm, coln + 4, "found in CANCEL file, but price is different.")
                     rowm += 1
                     diff_price += 1
@@ -251,9 +271,11 @@ for index, row in b_df.iterrows():
     if found == False:
         print(name, " Can't find customer Name")
         not_found += 1
-        # workbook_nf.write(row_nf,0,name)
-        # row_nf += 1
-
+        worksheet_nf.write(row_nf, 0, name)
+        row_nf += 1
+print(total_price_difference)
+worksheet.write(rowm, 2, "Total difference: ->")
+worksheet.write(rowm, 3, total_price_difference)
 workbook.close()
 workbook_nf.close()
 
