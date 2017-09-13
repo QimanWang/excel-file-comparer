@@ -130,19 +130,20 @@ c_df = c_df.loc[(c_df['Rate'] != "")]
 # for index, row in c_df.iterrows():
 #     print("index:::", index, row['Name'], row['Arrival'], row['Departure'], row['Rate'])
 
-ok_file = ""
-cancel_file = ""
-booking_file = ""
-files = [f for f in os.listdir('.') if os.path.isfile(f)]
-for f in files:
-    if " ok " in f and f[:2] != "~$":
-        ok_file = f
-    if " cancel " in f and f[:2] != "~$":
-        cancel_file = f
-    if " booking " in f and f[:2] != "~$":
-        booking_file = f
+# ok_file = ""
+# cancel_file = ""
+# booking_file = ""
+# files = [f for f in os.listdir('.') if os.path.isfile(f)]
+# for f in files:
+#     if " ok " in f and f[:2] != "~$":
+#         ok_file = f
+#     if " cancel " in f and f[:2] != "~$":
+#         cancel_file = f
+#     if " booking " in f and f[:2] != "~$":
+#         booking_file = f
 
 #########################################
+book_col_name = list(b_df)[0]
 print("begin comparison")
 # create worksheet
 workbook = xlsxwriter.Workbook('Expenses.xlsx')
@@ -203,7 +204,7 @@ for index, row in b_df.iterrows():
             match += 1
 
             if not ((h_arrival == b_checkin) & (h_departure == b_checkout)):
-                worksheet.write(rowm, coln, row['Booking Number'])
+                worksheet.write(rowm, coln, row[book_col_name])
                 worksheet.write(rowm, coln + 1, row_ok['CRS#'])
                 worksheet.write(rowm, coln + 2, name)
                 worksheet.write(rowm, coln + 3, row['Price'])
@@ -244,7 +245,7 @@ for index, row in b_df.iterrows():
                     found = True
 
                     print(name, price, "found in CANCEL file")
-                    worksheet.write(rowm, coln, row['Booking Number'])
+                    worksheet.write(rowm, coln, row[book_col_name])
                     worksheet.write(rowm, coln + 1, row_c['CRS#'])
                     worksheet.write(rowm, coln + 2, name)
                     worksheet.write(rowm, coln + 3, row['Price'])
