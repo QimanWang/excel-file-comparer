@@ -206,7 +206,7 @@ for index, row in b_df.iterrows():
                 worksheet.write(rowm, coln, row['Booking Number'])
                 worksheet.write(rowm, coln + 1, row_ok['CRS#'])
                 worksheet.write(rowm, coln + 2, name)
-                worksheet.write(rowm, coln + 3, row_ok['Price'])
+                worksheet.write(rowm, coln + 3, row['Price'])
                 worksheet.write(rowm, coln + 4, "Checked in, but different date")
                 print(name, " Found in OK file, but different date")
                 rowm += 1
@@ -247,7 +247,7 @@ for index, row in b_df.iterrows():
                     worksheet.write(rowm, coln, row['Booking Number'])
                     worksheet.write(rowm, coln + 1, row_c['CRS#'])
                     worksheet.write(rowm, coln + 2, name)
-                    worksheet.write(rowm, coln + 3, row_c['Price'])
+                    worksheet.write(rowm, coln + 3, row['Price'])
                     worksheet.write(rowm, coln + 4, "Canceled")
                     print(name, " Found in cancel file")
                     rowm += 1
