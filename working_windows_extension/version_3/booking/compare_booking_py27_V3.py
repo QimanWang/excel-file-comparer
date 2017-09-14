@@ -77,13 +77,24 @@ for name in booking_col_names:
 booking_col_names = list(booking_df)
 print(booking_col_names)
 
+
 b_df = booking_df[booking_df['Status'] == 'ok']
 print('booking df created')
+
+
+guest_col_name =""
+if "Guest name(s)" in list(b_df):
+    guest_col_name = 'Guest name(s)'
+    print("YESSSSSSSSSSSSSS")
+else:
+    guest_col_name = 'Guest Name(s)'
+    print("22222222222222")
+
 for index, row in b_df.iterrows():
-    if row['Guest name(s)'] == '':
+    if row[guest_col_name] == '':
         name = str(row['Booked by'])
         guest_name = name.split(",")
-        b_df.loc[index, 'Guest name(s)'] = guest_name[1][1:] + " " + guest_name[0]
+        b_df.loc[index, guest_col_name] = guest_name[1][1:] + " " + guest_name[0]
 
 ##########################################
 # loading the ok DF
@@ -144,6 +155,7 @@ c_df = c_df.loc[(c_df['Rate'] != "")]
 
 #########################################
 book_col_name = list(b_df)[0]
+
 print("begin comparison")
 # create worksheet
 workbook = xlsxwriter.Workbook('Expenses.xlsx')
@@ -171,7 +183,7 @@ total_price_difference = 0.00
 for index, row in b_df.iterrows():
 
     # initialzie what to compare
-    name = row['Guest name(s)']
+    name = row[guest_col_name]
     check_in_date = row['Check-in']
     check_out_date = row['Check-out']
     # print("check_in_date: ", check_in_date)

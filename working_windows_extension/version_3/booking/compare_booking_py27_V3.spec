@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['compare_booking_py27_V3.py'],
-             pathex=['C:\\Users\\qiman\\Desktop\\Github\\Joyce_stuff\\Joyce\\working_windows_extension\\version_3\\booking'],
+             pathex=['C:\\Users\\qiman\\Desktop\\github\\joyce_stuff\\joyce_new\\Joyce\\working_windows_extension\\version_3\\booking'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -25,4 +25,4 @@ exe = EXE(pyz,
           debug=False,
           strip=False,
           upx=True,
-          console=True , icon='C:\\Users\\qiman\\Desktop\\Github\\Joyce_stuff\\Joyce\\working_windows_extension\\version_3\\booking\\icon.ico')
+          console=True , icon='C:\\Users\\qiman\\Desktop\\github\\joyce_stuff\\joyce_new\\Joyce\\working_windows_extension\\version_3\\booking\\icon.ico')
