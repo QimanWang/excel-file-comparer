@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41022ac1-e03f-4d3c-9e22-d553cc85f21d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/compare_booking_py27_V3.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/Customers Not found.xlsx" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/Customers Not found.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/Expenses.xlsx" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/Expenses.xlsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/best_western_expedia_py27_v3.spec" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/Customers Not found.xlsx" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/Customers Not found.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/Expenses.xlsx" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/Expenses.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/Customers Not found.xlsx" afterPath="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/Customers Not found.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/Expenses.xlsx" afterPath="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/Expenses.xlsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/temp.py" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/temp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/best_western_expedia_py27_V3.py" afterPath="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/best_western_expedia_py27_V3.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,17 +23,20 @@
     <SUITE FILE_PATH="coverage/Joyce$compare_booking_py27_V2__1_.coverage" NAME="compare_booking_py27_V2 (1) Coverage Results" MODIFIED="1505273832095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_2" />
     <SUITE FILE_PATH="coverage/Joyce$best_western_expedia_py27_V3.coverage" NAME="best_western_expedia_py27_V3 Coverage Results" MODIFIED="1505801520572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia" />
     <SUITE FILE_PATH="coverage/Joyce$test.coverage" NAME="test Coverage Results" MODIFIED="1504019910534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Joyce$best_western_expedia_py27_V3__1_.coverage" NAME="best_western_expedia_py27_V3 (1) Coverage Results" MODIFIED="1505803627064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia" />
     <SUITE FILE_PATH="coverage/Joyce$compare_booking_py27_V2__2_.coverage" NAME="compare_booking_py27_V2 (2) Coverage Results" MODIFIED="1505278612127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/booking" />
     <SUITE FILE_PATH="coverage/Joyce$compare_booking_py27_V3.coverage" NAME="compare_booking_py27_V3 Coverage Results" MODIFIED="1505282067697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_3/booking" />
     <SUITE FILE_PATH="coverage/Joyce$temp.coverage" NAME="temp Coverage Results" MODIFIED="1505799029297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking" />
     <SUITE FILE_PATH="coverage/Joyce$compare_booking_py27_V2.coverage" NAME="compare_booking_py27_V2 Coverage Results" MODIFIED="1504328054852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
     <SUITE FILE_PATH="coverage/Joyce$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1503542891936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Joyce$tes.coverage" NAME="tes Coverage Results" MODIFIED="1504305705434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/omy" />
+    <SUITE FILE_PATH="coverage/Joyce$best_western_booking_py27_V3.coverage" NAME="best_western_booking_py27_V3 Coverage Results" MODIFIED="1505803089099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking" />
     <SUITE FILE_PATH="coverage/Joyce$setup.coverage" NAME="setup Coverage Results" MODIFIED="1503545459925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Joyce$compare_booking_py35_V2.coverage" NAME="compare_booking_py35_V2 Coverage Results" MODIFIED="1504328184059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_2" />
     <SUITE FILE_PATH="coverage/Joyce$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1503543062796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Joyce$booking_compare.coverage" NAME="booking_compare Coverage Results" MODIFIED="1504302583967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Joyce$any_col_compare.coverage" NAME="any_col_compare Coverage Results" MODIFIED="1504326962715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/omy" />
+    <SUITE FILE_PATH="coverage/Joyce$best_western_booking_py27_V3__1_.coverage" NAME="best_western_booking_py27_V3 (1) Coverage Results" MODIFIED="1505803578746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_4/best_western/booking" />
     <SUITE FILE_PATH="coverage/Joyce$compare_booking_py27_V3__1_.coverage" NAME="compare_booking_py27_V3 (1) Coverage Results" MODIFIED="1505801373174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking" />
   </component>
   <component name="FileColors">
@@ -42,50 +46,32 @@
     <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="temp.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/temp.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="414">
-                  <caret line="119" column="35" lean-forward="true" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="best_western_expedia_py27_V3.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/best_western_expedia_py27_V3.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="169" column="42" lean-forward="true" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="best_western_booking_py27_V3.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="284">
-                  <caret line="117" column="44" lean-forward="true" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="best_western_booking_py27_V4.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/working_windows_extension/version_4/best_western/booking/best_western_booking_py27_V4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="173" column="48" lean-forward="true" selection-start-line="173" selection-start-column="48" selection-end-line="173" selection-end-column="48" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="best_western_expedia_py27_V4.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/best_western_expedia_py27_V4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="185" column="25" lean-forward="false" selection-start-line="185" selection-start-column="25" selection-end-line="185" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,8 +127,10 @@
         <option value="$PROJECT_DIR$/working_windows_extension/version_3/booking/compare_booking_py27_V3.py" />
         <option value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/temp.py" />
         <option value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/compare_booking_py27_V3.py" />
-        <option value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py" />
         <option value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/best_western_expedia_py27_V3.py" />
+        <option value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py" />
+        <option value="$PROJECT_DIR$/working_windows_extension/version_4/best_western/booking/best_western_booking_py27_V3.py" />
+        <option value="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/best_western_expedia_py27_V3.py" />
       </list>
     </option>
   </component>
@@ -153,10 +141,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1042" />
+    <option name="x" value="642" />
+    <option name="width" value="1286" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -232,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.best_western_expedia_py27_V3">
+  <component name="RunManager" selected="Python.best_western_expedia_py27_V3 (1)">
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -381,6 +368,60 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
+    <configuration name="best_western_booking_py27_V3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/working_windows_extension/version_4/best_western/booking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Joyce" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\qiman\Desktop\Github\Joyce_stuff\Joyce\working_windows_extension\version_4\best_western\booking\best_western_booking_py27_V4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="best_western_booking_py27_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Joyce" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="best_western_expedia_py27_V3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Joyce" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\qiman\Desktop\Github\Joyce_stuff\Joyce\working_windows_extension\version_4\best_western\expedia\best_western_expedia_py27_V4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="best_western_expedia_py27_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -395,24 +436,6 @@
       <module name="Joyce" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/best_western_expedia_py27_V3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="compare_booking_py27_V2 (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/booking" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Joyce" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/booking/compare_booking_py27_V2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -435,56 +458,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="compare_booking_py27_V3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/working_windows_extension/version_3/booking" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Joyce" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/working_windows_extension/version_3/booking/compare_booking_py27_V3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Joyce" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/temp.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.compare_booking_py27_V2 (2)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.compare_booking_py27_V3" />
-      <item index="2" class="java.lang.String" itemvalue="Python.best_western_expedia_py27_V3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.temp" />
-      <item index="4" class="java.lang.String" itemvalue="Python.compare_booking_py27_V3 (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.best_western_expedia_py27_V3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.compare_booking_py27_V3 (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.best_western_booking_py27_V3" />
+      <item index="3" class="java.lang.String" itemvalue="Python.best_western_booking_py27_V3 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.best_western_expedia_py27_V3 (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.best_western_expedia_py27_V3" />
-        <item index="1" class="java.lang.String" itemvalue="Python.compare_booking_py27_V3 (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.temp" />
-        <item index="3" class="java.lang.String" itemvalue="Python.compare_booking_py27_V3" />
-        <item index="4" class="java.lang.String" itemvalue="Python.compare_booking_py27_V2 (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.best_western_expedia_py27_V3 (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.best_western_booking_py27_V3 (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.best_western_booking_py27_V3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.best_western_expedia_py27_V3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.compare_booking_py27_V3 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -502,15 +489,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="0" />
+    <frame x="642" y="0" width="1286" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19282745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19282745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7128263" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42759407" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -540,9 +528,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/omy/any_col_compare.py" />
-    <entry file="file://$PROJECT_DIR$/test3.py" />
-    <entry file="file://$PROJECT_DIR$/booking_compare.py" />
     <entry file="file://$PROJECT_DIR$/setup.py" />
     <entry file="file://$PROJECT_DIR$/test2.py" />
     <entry file="file://$PROJECT_DIR$/test.py" />
@@ -635,7 +620,17 @@
     <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/temp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
-          <caret line="119" column="35" lean-forward="true" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+          <caret line="119" column="35" lean-forward="false" selection-start-line="119" selection-start-column="35" selection-end-line="119" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/days_inn/booking/compare_booking_py27_V3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4050">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -644,8 +639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/best_western/booking/best_western_booking_py27_V3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="117" column="44" lean-forward="true" selection-start-line="117" selection-start-column="44" selection-end-line="117" selection-end-column="44" />
+        <state relative-caret-position="122">
+          <caret line="138" column="21" lean-forward="true" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -654,9 +649,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/working_windows_extension/version_3/best_western/expedia/best_western_expedia_py27_V3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="169" column="42" lean-forward="true" selection-start-line="169" selection-start-column="42" selection-end-line="169" selection-end-column="42" />
+        <state relative-caret-position="108">
+          <caret line="150" column="60" lean-forward="true" selection-start-line="150" selection-start-column="60" selection-end-line="150" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/working_windows_extension/version_4/best_western/expedia/best_western_expedia_py27_V4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="185" column="25" lean-forward="false" selection-start-line="185" selection-start-column="25" selection-end-line="185" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/working_windows_extension/version_4/best_western/booking/best_western_booking_py27_V4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="173" column="48" lean-forward="true" selection-start-line="173" selection-start-column="48" selection-end-line="173" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

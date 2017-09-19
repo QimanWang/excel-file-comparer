@@ -185,7 +185,7 @@ for index, row in website_df.iterrows():
         not_found += 1
         worksheet_nf.write(row_nf, 0, name)
         row_nf += 1
-        print(name, " not found")
+        print(name, " customer not found")
 workbook.close()
 workbook_nf.close()
 print("good:", good)

@@ -131,7 +131,8 @@ for index, row in web_df.iterrows():
                 worksheet.write(rowm, coln, row['Book number'])
                 worksheet.write(rowm, coln + 1, row_ok['CRSBookNum'])
                 worksheet.write(rowm, coln + 2, name)
-                worksheet.write(rowm, coln + 3, "Cancelled")
+                worksheet.write(rowm, coln + 3, row['Price'])
+                worksheet.write(rowm, coln + 4, "Cancelled")
                 print(name, " found in CANCEL file")
                 rowm += 1
                 canceled += 1
@@ -162,7 +163,8 @@ for index, row in web_df.iterrows():
                 worksheet.write(rowm, coln, row['Book number'])
                 worksheet.write(rowm, coln + 1, row_ok['CRSBookNum'])
                 worksheet.write(rowm, coln + 2, name)
-                worksheet.write(rowm, coln + 3, "Checked in, but different date")
+                worksheet.write(rowm, coln + 4, "Checked in, but different date")
+                worksheet.write(rowm, coln + 3, row['Price'])
                 print(name, " Found in OK file, but different date")
                 rowm += 1
                 break
