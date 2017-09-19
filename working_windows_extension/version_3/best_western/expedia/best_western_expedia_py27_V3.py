@@ -139,8 +139,6 @@ for index, row in website_df.iterrows():
             # check if in canceled
             print("checking if in cancel file first")
             if row_ok['CancelDt'] != "":
-                print("ROOM canceled", row_ok['CancelDt'])
-
                 worksheet.write(rowm, coln, row['Confirmation #'])
                 worksheet.write(rowm, coln + 1, row_ok['CRSBookNum'])
                 worksheet.write(rowm, coln + 2, name)
@@ -165,10 +163,10 @@ for index, row in website_df.iterrows():
             found = True
             match += 1
 
-            print('h_arrival: ', h_arrival)
-            print('h_departure: ', h_departure)
-            print("b_checkin: ", b_checkin)
-            print("b_checkout", b_checkout)
+            # print('h_arrival: ', h_arrival)
+            # print('h_departure: ', h_departure)
+            # print("b_checkin: ", b_checkin)
+            # print("b_checkout", b_checkout)
             if not ((h_arrival == b_checkin) & (h_departure == b_checkout)):
                 worksheet.write(rowm, coln, row['Confirmation #'])
                 worksheet.write(rowm, coln + 1, row_ok['CRSBookNum'])
@@ -179,6 +177,7 @@ for index, row in website_df.iterrows():
                 break
             else:
                 good += 1
+                print(name," Everything match")
                 break
 
     if found == False:
@@ -186,6 +185,7 @@ for index, row in website_df.iterrows():
         not_found += 1
         worksheet_nf.write(row_nf, 0, name)
         row_nf += 1
+        print(name, " not found")
 workbook.close()
 workbook_nf.close()
 print("good:", good)

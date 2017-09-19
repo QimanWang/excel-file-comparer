@@ -13,7 +13,7 @@ for f in files:
     f = f.lower()
     if "report" in f and f[:2] != "~$":
         hotel_file = f
-    if "booking" in f and f[:2] != "~$":
+    if "booking.com" in f and f[:2] != "~$":
         booking_file = f
 
 msg = "Files detected:\n" + booking_file + "\n" + hotel_file + "\n" + "Press Enter key to begin the process."
@@ -37,26 +37,8 @@ def same_name(booking_name, hotel_name):
         return False
 
 
-def calc_hotel_price(hotel_price, arrival, departure):
-    # print("input: ", booking_price, hotel_price, arrival, departure)
-
-    if departure[:2] == "De":
-        departure = departure[9:]
-        arrival = arrival[7:]
-        hotel_price = hotel_price[4:]
-
-    date_format = "%m/%d/%Y"
-    a = datetime.datetime.strptime(departure, date_format)
-    b = datetime.datetime.strptime(arrival, date_format)
-    delta = a - b
-    # print("hotel price: ", float(delta.days) * float(hotel_price), "booking price: ", float(booking_price))
-    # print(float(delta.days) * float(hotel_price) == float(booking_price))
-    return (float(delta.days) * float(hotel_price))
-
-
 ######################################################################################
 match = 0
-diff_price = 0
 canceled = 0
 not_found = 0
 
@@ -78,21 +60,19 @@ booking_col_names = list(booking_df)
 # print(booking_col_names)
 
 website_df = booking_df[booking_df['Status'] == 'ok']
-
-
 guest_col_name =""
-if "Guest name(s)" in list(b_df):
+if "Guest name(s)" in list(website_df):
     guest_col_name = 'Guest name(s)'
     print("YESSSSSSSSSSSSSS")
 else:
     guest_col_name = 'Guest Name(s)'
     print("22222222222222")
 
-for index, row in b_df.iterrows():
+for index, row in website_df.iterrows():
     if row[guest_col_name] == '':
-        name = str(row['Booked by'])
+        name = row['Booked by'].encode('utf-8')
         guest_name = name.split(",")
-        b_df.loc[index, guest_col_name] = guest_name[1][1:] + " " + guest_name[0]
+        website_df.loc[index, guest_col_name] = guest_name[1][1:] + " " + guest_name[0]
 
 
 #
@@ -112,6 +92,7 @@ o_df = xl.parse(header=0, keep_default_na=False, )
 #     print("index:::", index, row['GuestName'], row['ArrivalDt'], row['DaysStay'], row['CancelDt'])
 
 # #########################################
+book_col_name = list(website_df)[0]
 print("begin comparison")
 # create worksheet
 workbook = xlsxwriter.Workbook('Expenses.xlsx')
@@ -121,7 +102,7 @@ coln = 0
 worksheet.write(rowm, coln, "Confirmation Number")
 worksheet.write(rowm, coln + 1, "CRS Number")
 worksheet.write(rowm, coln + 2, "Name")
-worksheet.write(rowm, coln + 3, "Booking.com Price")
+worksheet.write(rowm, coln + 3, "Description")
 worksheet.write(rowm, coln + 4, "Description")
 rowm += 1
 
@@ -139,17 +120,14 @@ for index, row in website_df.iterrows():
     check_in_date = row['Check-in']
     check_out_date = row['Check-out']
     # print("check_in_date: ", check_in_date)
-    check_in_date = str(check_in_date).split("-")
-    # print(check_in_date)
+    check_in_date = check_in_date.split("-")
     # print("check_in_date after split: ", check_in_date)
-    check_out_date = str(check_out_date).split("-")
-    # print(check_out_date)
-    # price = row['Price'][:-3]
+    check_out_date = check_out_date.split("-")
     found = False
 
     # check if in ok, but different price
     for index_ok, row_ok in o_df.iterrows():
-        if (same_name(name.lower(), row_ok['GuestName'].lower())):
+        if (same_name(name.lower(), row_ok['Name'].lower())):
             found = True
 
             # if name matched
