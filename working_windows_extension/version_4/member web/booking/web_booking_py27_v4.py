@@ -95,10 +95,10 @@ workbook = xlsxwriter.Workbook('Expenses.xlsx')
 worksheet = workbook.add_worksheet()
 rowm = 0
 coln = 0
-worksheet.write(rowm, coln, "Confirmation Number")
-worksheet.write(rowm, coln + 1, "Conf/Cxl#")
-worksheet.write(rowm, coln + 2, "Name")
-worksheet.write(rowm, coln + 3, "Booking.com Price")
+worksheet.write(rowm, coln, "Booking Number")
+worksheet.write(rowm, coln + 1, "Conf Number ")
+worksheet.write(rowm, coln + 2, "Guest Name")
+worksheet.write(rowm, coln + 3, "Price")
 worksheet.write(rowm, coln + 4, "Description")
 rowm += 1
 

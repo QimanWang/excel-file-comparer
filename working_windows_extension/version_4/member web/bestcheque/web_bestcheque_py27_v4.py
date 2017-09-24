@@ -62,11 +62,11 @@ workbook = xlsxwriter.Workbook('Expenses.xlsx')
 worksheet = workbook.add_worksheet()
 rowm = 0
 coln = 0
-worksheet.write(rowm, coln, "Confirmation Number")
-worksheet.write(rowm, coln + 1, "Conf/Cxl#")
-worksheet.write(rowm, coln + 2, "Name")
-worksheet.write(rowm, coln + 3, "Price")
-worksheet.write(rowm, coln + 4, "Description")
+# worksheet.write(rowm, coln, "Confirmation Number")
+worksheet.write(rowm, coln + 0, "Conf Number")
+worksheet.write(rowm, coln + 1, "Guest Name")
+worksheet.write(rowm, coln + 2, "Price")
+worksheet.write(rowm, coln + 3, "Description")
 rowm += 1
 
 workbook_nf = xlsxwriter.Workbook('Customers Not found.xlsx')
@@ -106,11 +106,11 @@ for index, row in web_df.iterrows():
             if row_ok['Unnamed: 10'] != "":
                 print(name, "ROOM canceled", row_ok['Unnamed: 10'])
 
-                worksheet.write(rowm, coln, "")
-                worksheet.write(rowm, coln + 1, row_ok['Conf/Cxl#'])
-                worksheet.write(rowm, coln + 2, name)
-                worksheet.write(rowm, coln + 3, row['Room Rev'])
-                worksheet.write(rowm, coln + 4, "Cancelled")
+                # worksheet.write(rowm, coln, "")
+                worksheet.write(rowm, coln + 0, row_ok['Conf/Cxl#'])
+                worksheet.write(rowm, coln + 1, name)
+                worksheet.write(rowm, coln + 2, row['Room Rev'])
+                worksheet.write(rowm, coln + 3, "Cancelled")
 
                 print(name, " found in CANCEL file")
                 rowm += 1
@@ -142,11 +142,11 @@ for index, row in web_df.iterrows():
             # print("b_checkout", b_checkout)
 
             if not ((h_arrival == b_checkin) & (h_departure == b_checkout)):
-                worksheet.write(rowm, coln, "")
-                worksheet.write(rowm, coln + 1, row_ok['Conf/Cxl#'])
-                worksheet.write(rowm, coln + 2, name)
-                worksheet.write(rowm, coln + 3, row['Room Rev'])
-                worksheet.write(rowm, coln + 4, "Checked in, but different date")
+                # worksheet.write(rowm, coln, "")
+                worksheet.write(rowm, coln + 0, row_ok['Conf/Cxl#'])
+                worksheet.write(rowm, coln + 1, name)
+                worksheet.write(rowm, coln + 2, row['Room Rev'])
+                worksheet.write(rowm, coln + 3, "Date changed")
                 print(name, " Found in OK file, but different date")
                 rowm += 1
                 break
