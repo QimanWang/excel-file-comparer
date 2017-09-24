@@ -143,6 +143,7 @@ for index, row in web_df.iterrows():
             # hotel date
             date_format = "%m/%d/%Y"
             arrival = row_ok['ArrivalDt']
+
             h_arrival = datetime.datetime.strptime(arrival, date_format)
             h_departure = h_arrival + datetime.timedelta(days=row_ok['DaysStay'])
             # + int(row_ok['DaysStay'])
