@@ -76,6 +76,9 @@ row_nf = 0
 ###################################################################
 # check loop
 good = 0
+status_col_name_index = list(hotel_df).index("GTD")
+status_col_name = list(hotel_df)[status_col_name_index + 1]
+print("status", status_col_name)
 for index, row in web_df.iterrows():
 
     # initialzie what to compare
@@ -103,8 +106,8 @@ for index, row in web_df.iterrows():
         if (same_name(name.lower(), row_ok['Guest Name'].lower())):
             found = True
 
-            if row_ok['Unnamed: 10'] != "":
-                print(name, "ROOM canceled", row_ok['Unnamed: 10'])
+            if row_ok[status_col_name] != "":
+                print(name, "ROOM canceled", row_ok[status_col_name])
 
                 # worksheet.write(rowm, coln, "")
                 worksheet.write(rowm, coln + 0, row_ok['Conf/Cxl#'])
